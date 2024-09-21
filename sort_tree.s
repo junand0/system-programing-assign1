@@ -9,25 +9,23 @@ sort_tree:
 				/* rdi 1 *node */
 				/* rsi 2 idx */
 				/* rdx 3 *list */
-	cmp 8(%rdi), $0
+	cmpq $0, 8(%rdi)
 	je	.L1
 	pushq %rdi
-	movq 8(%rdi), %r8
-	movq %r8, %rdi
+	movq 8(%rdi), %rdi
 	call sort_tree
 	popq %rdi
 	movq %rax, %rsi
 
 .L1:
-	movl (%rdi), %r8
-	movl %r8, (%rdx,%rsi,4)
-	addq 1, %rsi
+	movl (%rdi), %r8d
+	movl %r8d, (%rdx,%rsi,4)
+	addq $1, %rsi
 
-	cmp 16(%rdi), $0
+	cmpq $0, 16(%rdi)
 	je .L2
 	pushq %rdi
-	movq 16(%rdi), %r8
-	movq %r8, %rdi
+	movq 16(%rdi), %rdi
 	call sort_tree
 	popq %rdi
 	movq %rax, %rsi
