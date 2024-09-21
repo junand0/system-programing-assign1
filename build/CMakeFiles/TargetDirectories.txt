@@ -1,0 +1,3 @@
+/Users/junyeong/system_programing/mac_assign-1/build/CMakeFiles/exec.o.dir
+/Users/junyeong/system_programing/mac_assign-1/build/CMakeFiles/edit_cache.dir
+/Users/junyeong/system_programing/mac_assign-1/build/CMakeFiles/rebuild_cache.dir
